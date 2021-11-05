@@ -5,10 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace _110_1MidSample {
-    public partial class Sample1Com : System.Web.UI.Page {
-        protected void Page_Load(object sender, EventArgs e) {
-
+namespace _110_1MidSample 
+{
+    public partial class Sample1Com : System.Web.UI.Page 
+    {
+        protected void Page_Load(object sender, EventArgs e) 
+        {
+            lb_Msg.Text = Request.Form.Get("tb_CellPhone");
         }
 
         // To convert a plain-text string into a md5 string
@@ -22,5 +25,7 @@ namespace _110_1MidSample {
                 .ToUpper();
             return s_Md5;
         }
+
+        
     }
 }
